@@ -13,8 +13,9 @@ function App() {
 					<Route exact path="/">
 						<Home />
 					</Route>
-					<Route path="/posts/postId" />
+					<Route exact path="/posts/:postId">
 					<PostDetail />
+					</Route>
 				</Switch>
 			</div>
 		</div>
