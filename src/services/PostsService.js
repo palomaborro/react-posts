@@ -9,3 +9,8 @@ export const getPosts = () => {
 export const getPost = (postId) => {
     return http.get(`/posts/${postId}`)
 }
+
+//
+export const getPostComment = (postId) => {
+    return http.get(`/posts/${postId}/comments`)
+}
