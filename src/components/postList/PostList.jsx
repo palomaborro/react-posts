@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { getPosts } from '../../services/PostsService';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const PostList = () => {
 	const [posts, setPosts] = useState(null); // Estado inicial de los posts
 	const [loading, setLoading] = useState(true); // Estado de carga mientras aparecen los posts
+
+    const context = useContext(ThemeContext);
 
 	// Para pintar los posts
 	useEffect(() => {
